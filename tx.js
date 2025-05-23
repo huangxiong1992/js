@@ -1,162 +1,179 @@
 var rule = {
-    title: '百忙无果[官]',
-    host: 'https://pianku.api.%6d%67%74%76.com',
-    homeUrl: '',
-    searchUrl: 'https://mobileso.bz.%6d%67%74%76.com/msite/search/v2?q=**&pn=fypage&pc=10',
-    detailUrl: 'https://pcweb.api.mgtv.com/episode/list?page=1&size=50&video_id=fyid',
+    title: '腾云驾雾[官]',
+    host: 'https://v.qq.com',
+    homeUrl: '/x/bu/pagesheet/list?_all=1&append=1&channel=cartoon&listpage=1&offset=0&pagesize=21&iarea=-1&sort=18',
+    detailUrl: 'https://node.video.qq.com/x/api/float_vinfo2?cid=fyid',
+    searchUrl: '/x/search/?q=**&stag=fypage',
+    searchUrl: 'https://pbaccess.video.qq.com/trpc.videosearch.smartboxServer.HttpRountRecall/Smartbox?query=**&appID=3172&appKey=lGhFIPeD3HsO9xEp&pageNum=(fypage-1)&pageSize=10',
     searchable: 2,
-    quickSearch: 0,
     filterable: 1,
     multi: 1,
-    url: '/rider/list/pcweb/v3?platform=pcweb&channelId=fyclass&pn=fypage&pc=80&hudong=1&_support=10000000&kind=a1&area=a1',
-    filter_url: 'year={{fl.year or "all"}}&sort={{fl.sort or "all"}}&chargeInfo={{fl.chargeInfo or "all"}}',
+    url: '/x/bu/pagesheet/list?_all=1&append=1&channel=fyclass&listpage=1&offset=((fypage-1)*21)&pagesize=21&iarea=-1',
+    filter_url: 'sort={{fl.sort or 75}}&iyear={{fl.iyear}}&year={{fl.year}}&itype={{fl.type}}&ifeature={{fl.feature}}&iarea={{fl.area}}&itrailer={{fl.itrailer}}&gender={{fl.sex}}',
+    filter:{'choice':[{'key':'sort','name':'排序','value':[{'n':'最热','v':'75'},{'n':'最新','v':'83'},{'n':'好评','v':'81'}]},{'key':'iyear','name':'年代','value':[{'n':'全部','v':'-1'},{'n':'2025','v':'2025'},{'n':'2024','v':'2024'},{'n':'2023','v':'2023'},{'n':'2022','v':'2022'},{'n':'2021','v':'2021'},{'n':'2020','v':'2020'},{'n':'2019','v':'2019'},{'n':'2018','v':'2018'},{'n':'2017','v':'2017'},{'n':'2016','v':'2016'},{'n':'2015','v':'2015'}]}],'tv':[{'key':'sort','name':'排序','value':[{'n':'最热','v':'75'},{'n':'最新','v':'79'},{'n':'好评','v':'16'}]},{'key':'feature','name':'类型','value':[{'n':'全部','v':'-1'},{'n':'爱情','v':'1'},{'n':'古装','v':'2'},{'n':'悬疑','v':'3'},{'n':'都市','v':'4'},{'n':'家庭','v':'5'},{'n':'喜剧','v':'6'},{'n':'传奇','v':'7'},{'n':'武侠','v':'8'},{'n':'军旅','v':'9'},{'n':'权谋','v':'10'},{'n':'革命','v':'11'},{'n':'现实','v':'13'},{'n':'青春','v':'14'},{'n':'猎奇','v':'15'},{'n':'科幻','v':'16'},{'n':'竞技','v':'17'},{'n':'玄幻','v':'18'}]},{'key':'iyear','name':'年代','value':[{'n':'全部','v':'-1'},{'n':'2025','v':'2025'},{'n':'2024','v':'2024'},{'n':'2023','v':'2023'},{'n':'2022','v':'2022'},{'n':'2021','v':'2021'},{'n':'2020','v':'2020'},{'n':'2019','v':'2019'},{'n':'2018','v':'2018'},{'n':'2017','v':'2017'},{'n':'2016','v':'2016'},{'n':'2015','v':'2015'}]}],'movie':[{'key':'sort','name':'排序','value':[{'n':'最热','v':'75'},{'n':'最新','v':'83'},{'n':'好评','v':'81'}]},{'key':'type','name':'类型','value':[{'n':'全部','v':'-1'},{'n':'犯罪','v':'4'},{'n':'励志','v':'2'},{'n':'喜剧','v':'100004'},{'n':'热血','v':'100061'},{'n':'悬疑','v':'100009'},{'n':'爱情','v':'100005'},{'n':'科幻','v':'100012'},{'n':'恐怖','v':'100010'},{'n':'动画','v':'100015'},{'n':'战争','v':'100006'},{'n':'家庭','v':'100017'},{'n':'剧情','v':'100022'},{'n':'奇幻','v':'100016'},{'n':'武侠','v':'100011'},{'n':'历史','v':'100021'},{'n':'老片','v':'100013'},{'n':'西部','v':'3'},{'n':'记录片','v':'100020'}]},{'key':'year','name':'年代','value':[{'n':'全部','v':'-1'},{'n':'2025','v':'2025'},{'n':'2024','v':'2024'},{'n':'2023','v':'2023'},{'n':'2022','v':'2022'},{'n':'2021','v':'2021'},{'n':'2020','v':'2020'},{'n':'2019','v':'2019'},{'n':'2018','v':'2018'},{'n':'2017','v':'2017'},{'n':'2016','v':'2016'},{'n':'2015','v':'2015'}]}],'variety':[{'key':'sort','name':'排序','value':[{'n':'最热','v':'75'},{'n':'最新','v':'23'}]},{'key':'iyear','name':'年代','value':[{'n':'全部','v':'-1'},{'n':'2025','v':'2025'},{'n':'2024','v':'2024'},{'n':'2023','v':'2023'},{'n':'2022','v':'2022'},{'n':'2021','v':'2021'},{'n':'2020','v':'2020'},{'n':'2019','v':'2019'},{'n':'2018','v':'2018'},{'n':'2017','v':'2017'},{'n':'2016','v':'2016'},{'n':'2015','v':'2015'}]}],'cartoon':[{'key':'sort','name':'排序','value':[{'n':'最热','v':'75'},{'n':'最新','v':'83'},{'n':'好评','v':'81'}]},{'key':'area','name':'地区','value':[{'n':'全部','v':'-1'},{'n':'内地','v':'1'},{'n':'日本','v':'2'},{'n':'欧美','v':'3'},{'n':'其他','v':'4'}]},{'key':'type','name':'类型','value':[{'n':'全部','v':'-1'},{'n':'玄幻','v':'9'},{'n':'科幻','v':'4'},{'n':'武侠','v':'13'},{'n':'冒险','v':'3'},{'n':'战斗','v':'5'},{'n':'搞笑','v':'1'},{'n':'恋爱','v':'7'},{'n':'魔幻','v':'6'},{'n':'竞技','v':'20'},{'n':'悬疑','v':'17'},{'n':'日常','v':'15'},{'n':'校园','v':'16'},{'n':'真人','v':'18'},{'n':'推理','v':'14'},{'n':'历史','v':'19'},{'n':'经典','v':'3'},{'n':'其他','v':'12'}]},{'key':'iyear','name':'年代','value':[{'n':'全部','v':'-1'},{'n':'2025','v':'2025'},{'n':'2024','v':'2024'},{'n':'2023','v':'2023'},{'n':'2022','v':'2022'},{'n':'2021','v':'2021'},{'n':'2020','v':'2020'},{'n':'2019','v':'2019'},{'n':'2018','v':'2018'},{'n':'2017','v':'2017'},{'n':'2016','v':'2016'},{'n':'2015','v':'2015'}]}],'child':[{'key':'sort','name':'排序','value':[{'n':'最热','v':'75'},{'n':'最新','v':'76'},{'n':'好评','v':'20'}]},{'key':'sex','name':'性别','value':[{'n':'全部','v':'-1'},{'n':'女孩','v':'1'},{'n':'男孩','v':'2'}]},{'key':'area','name':'地区','value':[{'n':'全部','v':'-1'},{'n':'内地','v':'3'},{'n':'日本','v':'2'},{'n':'其他','v':'1'}]},{'key':'iyear','name':'年龄段','value':[{'n':'全部','v':'-1'},{'n':'0-3岁','v':'1'},{'n':'4-6岁','v':'2'},{'n':'7-9岁','v':'3'},{'n':'10岁以上','v':'4'},{'n':'全年龄段','v':'7'}]}],'doco':[{'key':'sort','name':'排序','value':[{'n':'最热','v':'75'},{'n':'最新','v':'74'}]},{'key':'itrailer','name':'出品方','value':[{'n':'全部','v':'-1'},{'n':'BBC','v':'1'},{'n':'国家地理','v':'4'},{'n':'HBO','v':'3175'},{'n':'NHK','v':'2'},{'n':'历史频道','v':'7'},{'n':'ITV','v':'3530'},{'n':'探索频道','v':'3174'},{'n':'ZDF','v':'3176'},{'n':'腾讯自制','v':'15'},{'n':'合作机构','v':'6'},{'n':'其他','v':'5'}]},{'key':'type','name':'类型','value':[{'n':'全部','v':'-1'},{'n':'自然','v':'4'},{'n':'美食','v':'10'},{'n':'社会','v':'3'},{'n':'人文','v':'6'},{'n':'历史','v':'1'},{'n':'军事','v':'2'},{'n':'科技','v':'8'},{'n':'财经','v':'14'},{'n':'探险','v':'15'},{'n':'罪案','v':'7'},{'n':'竞技','v':'12'},{'n':'旅游','v':'11'}]}]},
+
     headers: {
         'User-Agent': 'PC_UA'
     },
     timeout: 5000,
-    class_name: '4K电视剧&4K电影&4K综艺&4K动漫&4K纪录片&4K教育&4K少儿',
-    class_url: '2&3&1&50&51&115&10',
-    filter:{'2': [{'key': 'chargeInfo', 'name': '付费类型', 'value': [{'n': '全部', 'v': 'all'}, {'n': '免费', 'v': 'b1'}, {'n': 'vip', 'v': 'b2'}, {'n': 'VIP用券', 'v': 'b3'}, {'n': '付费点播', 'v': 'b4'}]}, {'key': 'sort', 'name': '排序', 'value': [{'n': '最新', 'v': 'c1'}, {'n': '最热', 'v': 'c2'}, {'n': '知乎高分', 'v': 'c4'}]}, {'key': 'year', 'name': '年代', 'value': [{'n': '全部', 'v': 'all'}, {'n': '2025', 'v': 2025}, {'n': '2024', 'v': '2024'}, {'n': '2023', 'v': '2023'}, {'n': '2022', 'v': '2022'}, {'n': '2021', 'v': '2021'}, {'n': '2020', 'v': '2020'}, {'n': '2019', 'v': '2019'}, {'n': '2018', 'v': '2018'}, {'n': '2017', 'v': '2017'}, {'n': '2016', 'v': '2016'}, {'n': '2015', 'v': '2015'}, {'n': '2014', 'v': '2014'}, {'n': '2013', 'v': '2013'}, {'n': '2012', 'v': '2012'}, {'n': '2011', 'v': '2011'}, {'n': '2010', 'v': '2010'}, {'n': '2009', 'v': '2009'}, {'n': '2008', 'v': '2008'}, {'n': '2007', 'v': '2007'}, {'n': '2006', 'v': '2006'}, {'n': '2005', 'v': '2005'}, {'n': '2004', 'v': '2004'}]}], '3': [{'key': 'chargeInfo', 'name': '付费类型', 'value': [{'n': '全部', 'v': 'all'}, {'n': '免费', 'v': 'b1'}, {'n': 'vip', 'v': 'b2'}, {'n': 'VIP用券', 'v': 'b3'}, {'n': '付费点播', 'v': 'b4'}]}, {'key': 'sort', 'name': '排序', 'value': [{'n': '最新', 'v': 'c1'}, {'n': '最热', 'v': 'c2'}, {'n': '知乎高分', 'v': 'c4'}]}, {'key': 'year', 'name': '年代', 'value': [{'n': '全部', 'v': 'all'}, {'n': '2025', 'v': 2025}, {'n': '2024', 'v': '2024'}, {'n': '2023', 'v': '2023'}, {'n': '2022', 'v': '2022'}, {'n': '2021', 'v': '2021'}, {'n': '2020', 'v': '2020'}, {'n': '2019', 'v': '2019'}, {'n': '2018', 'v': '2018'}, {'n': '2017', 'v': '2017'}, {'n': '2016', 'v': '2016'}, {'n': '2015', 'v': '2015'}, {'n': '2014', 'v': '2014'}, {'n': '2013', 'v': '2013'}, {'n': '2012', 'v': '2012'}, {'n': '2011', 'v': '2011'}, {'n': '2010', 'v': '2010'}, {'n': '2009', 'v': '2009'}, {'n': '2008', 'v': '2008'}, {'n': '2007', 'v': '2007'}, {'n': '2006', 'v': '2006'}, {'n': '2005', 'v': '2005'}, {'n': '2004', 'v': '2004'}]}], '1': [{'key': 'chargeInfo', 'name': '付费类型', 'value': [{'n': '全部', 'v': 'all'}, {'n': '免费', 'v': 'b1'}, {'n': 'vip', 'v': 'b2'}, {'n': 'VIP用券', 'v': 'b3'}, {'n': '付费点播', 'v': 'b4'}]}, {'key': 'sort', 'name': '排序', 'value': [{'n': '最新', 'v': 'c1'}, {'n': '最热', 'v': 'c2'}, {'n': '知乎高分', 'v': 'c4'}]}, {'key': 'year', 'name': '年代', 'value': [{'n': '全部', 'v': 'all'}, {'n': '2025', 'v': 2025}, {'n': '2024', 'v': '2024'}, {'n': '2023', 'v': '2023'}, {'n': '2022', 'v': '2022'}, {'n': '2021', 'v': '2021'}, {'n': '2020', 'v': '2020'}, {'n': '2019', 'v': '2019'}, {'n': '2018', 'v': '2018'}, {'n': '2017', 'v': '2017'}, {'n': '2016', 'v': '2016'}, {'n': '2015', 'v': '2015'}, {'n': '2014', 'v': '2014'}, {'n': '2013', 'v': '2013'}, {'n': '2012', 'v': '2012'}, {'n': '2011', 'v': '2011'}, {'n': '2010', 'v': '2010'}, {'n': '2009', 'v': '2009'}, {'n': '2008', 'v': '2008'}, {'n': '2007', 'v': '2007'}, {'n': '2006', 'v': '2006'}, {'n': '2005', 'v': '2005'}, {'n': '2004', 'v': '2004'}]}], '50': [{'key': 'chargeInfo', 'name': '付费类型', 'value': [{'n': '全部', 'v': 'all'}, {'n': '免费', 'v': 'b1'}, {'n': 'vip', 'v': 'b2'}, {'n': 'VIP用券', 'v': 'b3'}, {'n': '付费点播', 'v': 'b4'}]}, {'key': 'sort', 'name': '排序', 'value': [{'n': '最新', 'v': 'c1'}, {'n': '最热', 'v': 'c2'}, {'n': '知乎高分', 'v': 'c4'}]}, {'key': 'year', 'name': '年代', 'value': [{'n': '全部', 'v': 'all'}, {'n': '2025', 'v': 2025}, {'n': '2024', 'v': '2024'}, {'n': '2023', 'v': '2023'}, {'n': '2022', 'v': '2022'}, {'n': '2021', 'v': '2021'}, {'n': '2020', 'v': '2020'}, {'n': '2019', 'v': '2019'}, {'n': '2018', 'v': '2018'}, {'n': '2017', 'v': '2017'}, {'n': '2016', 'v': '2016'}, {'n': '2015', 'v': '2015'}, {'n': '2014', 'v': '2014'}, {'n': '2013', 'v': '2013'}, {'n': '2012', 'v': '2012'}, {'n': '2011', 'v': '2011'}, {'n': '2010', 'v': '2010'}, {'n': '2009', 'v': '2009'}, {'n': '2008', 'v': '2008'}, {'n': '2007', 'v': '2007'}, {'n': '2006', 'v': '2006'}, {'n': '2005', 'v': '2005'}, {'n': '2004', 'v': '2004'}]}], '51': [{'key': 'chargeInfo', 'name': '付费类型', 'value': [{'n': '全部', 'v': 'all'}, {'n': '免费', 'v': 'b1'}, {'n': 'vip', 'v': 'b2'}, {'n': 'VIP用券', 'v': 'b3'}, {'n': '付费点播', 'v': 'b4'}]}, {'key': 'sort', 'name': '排序', 'value': [{'n': '最新', 'v': 'c1'}, {'n': '最热', 'v': 'c2'}, {'n': '知乎高分', 'v': 'c4'}]}, {'key': 'year', 'name': '年代', 'value': [{'n': '全部', 'v': 'all'}, {'n': '2025', 'v': 2025}, {'n': '2024', 'v': '2024'}, {'n': '2023', 'v': '2023'}, {'n': '2022', 'v': '2022'}, {'n': '2021', 'v': '2021'}, {'n': '2020', 'v': '2020'}, {'n': '2019', 'v': '2019'}, {'n': '2018', 'v': '2018'}, {'n': '2017', 'v': '2017'}, {'n': '2016', 'v': '2016'}, {'n': '2015', 'v': '2015'}, {'n': '2014', 'v': '2014'}, {'n': '2013', 'v': '2013'}, {'n': '2012', 'v': '2012'}, {'n': '2011', 'v': '2011'}, {'n': '2010', 'v': '2010'}, {'n': '2009', 'v': '2009'}, {'n': '2008', 'v': '2008'}, {'n': '2007', 'v': '2007'}, {'n': '2006', 'v': '2006'}, {'n': '2005', 'v': '2005'}, {'n': '2004', 'v': '2004'}]}], '115': [{'key': 'chargeInfo', 'name': '付费类型', 'value': [{'n': '全部', 'v': 'all'}, {'n': '免费', 'v': 'b1'}, {'n': 'vip', 'v': 'b2'}, {'n': 'VIP用券', 'v': 'b3'}, {'n': '付费点播', 'v': 'b4'}]}, {'key': 'sort', 'name': '排序', 'value': [{'n': '最新', 'v': 'c1'}, {'n': '最热', 'v': 'c2'}, {'n': '知乎高分', 'v': 'c4'}]}, {'key': 'year', 'name': '年代', 'value': [{'n': '全部', 'v': 'all'}, {'n': '2025', 'v': 2025}, {'n': '2024', 'v': '2024'}, {'n': '2023', 'v': '2023'}, {'n': '2022', 'v': '2022'}, {'n': '2021', 'v': '2021'}, {'n': '2020', 'v': '2020'}, {'n': '2019', 'v': '2019'}, {'n': '2018', 'v': '2018'}, {'n': '2017', 'v': '2017'}, {'n': '2016', 'v': '2016'}, {'n': '2015', 'v': '2015'}, {'n': '2014', 'v': '2014'}, {'n': '2013', 'v': '2013'}, {'n': '2012', 'v': '2012'}, {'n': '2011', 'v': '2011'}, {'n': '2010', 'v': '2010'}, {'n': '2009', 'v': '2009'}, {'n': '2008', 'v': '2008'}, {'n': '2007', 'v': '2007'}, {'n': '2006', 'v': '2006'}, {'n': '2005', 'v': '2005'}, {'n': '2004', 'v': '2004'}]}]},
-    limit:20,
-    play_parse: true,
-    
-    一级: 'json:data.hitDocs;title;img;updateInfo||rightCorner.text;playPartId',
-
+    // class_parse:'.site_channel a;a&&Text;a&&href;channel/(.*)',
+    cate_exclude: '会员|游戏|全部',
+    // class_name: '电视剧&电影&综艺&动漫&少儿&纪录片',
+    // class_url: 'choice&tv&movie&variety&cartoon&child&doco',
+    class_name: '4K电影&4K电视剧&4K综艺&4K动漫&4K少儿&4K纪录片',
+    class_url: 'movie&tv&variety&cartoon&child&doco',
+    limit: 20,
+    // play_parse:true,
+    // 手动调用解析请求json的url,此lazy不方便
+    lazy: 'js:input="https://cache.json.icu/home/api?type=ys&uid=292796&key=fnoryABDEFJNPQV269&url="+input.split("?")[0];log(input);let html=JSON.parse(request(input));log(html);input=html.url||input',
+    推荐: '.list_item;img&&alt;img&&src;a&&Text;a&&data-float',
+    一级: '.list_item;img&&alt;img&&src;a&&Text;a&&data-float',
     二级: $js.toString(() => {
-        fetch_params.headers.Referer = "https://www.mgtv.com";
-        fetch_params.headers["User-Agent"] = UA;
-        pdfh = jsp.pdfh;
-        pdfa = jsp.pdfa;
-        pd = jsp.pd;
         VOD = {};
         let d = [];
-        let html = request(input);
-        let json = JSON.parse(html);
-        let host = "https://www.mgtv.com";
-        let ourl = json.data.list.length > 0 ? json.data.list[0].url : json.data.series[0].url;
-        if (!/^http/.test(ourl)) {
-            ourl = host + ourl
-        }
-        fetch_params.headers["User-Agent"] = MOBILE_UA;
-        html = request(ourl);
-        if (html.includes("window.location =")) {
-            print("开始获取ourl");
-            ourl = pdfh(html, "meta[http-equiv=refresh]&&content").split("url=")[1];
-            print("获取到ourl:" + ourl);
-            html = request(ourl)
-        }
+        let video_list = [];
+        let video_lists = [];
+        let list = [];
+        let QZOutputJson;
+        let html = fetch(input, fetch_params);
+        let sourceId = /get_playsource/.test(input) ? input.match(/id=(\d*?)&/)[1] : input.split("cid=")[1];
+        let cid = sourceId;
+        let detailUrl = "https://v.qq.com/detail/m/" + cid + ".html";
+        log("详情页:" + detailUrl);
+        pdfh = jsp.pdfh;
+        pd = jsp.pd;
         try {
-            let details = pdfh(html, ".m-details&&Html").replace(/h1>/, "h6>").replace(/div/g, "br");
-            print(details);
-            let actor = "",
-                director = "",
-                time = "";
-            if (/播出时间/.test(details)) {
-                actor = pdfh(html, "p:eq(5)&&Text").substr(0, 25);
-                director = pdfh(html, "p:eq(4)&&Text");
-                time = pdfh(html, "p:eq(3)&&Text")
-            } else {
-                actor = pdfh(html, "p:eq(4)&&Text").substr(0, 25);
-                director = pdfh(html, "p:eq(3)&&Text");
-                time = "已完结"
-            }
-            let _img = pd(html, ".video-img&&img&&src");
-            let JJ = pdfh(html, ".desc&&Text").split("简介：")[1];
-            let _desc = time;
-            VOD.vod_name = pdfh(html, ".vt-txt&&Text");
-            VOD.type_name = pdfh(html, "p:eq(0)&&Text").substr(0, 6);
-            VOD.vod_area = pdfh(html, "p:eq(1)&&Text");
-            VOD.vod_actor = actor;
-            VOD.vod_director = director;
-            VOD.vod_remarks = _desc;
-            VOD.vod_pic = _img;
-            VOD.vod_content = JJ;
-            if (!VOD.vod_name) {
-                VOD.vod_name = VOD.type_name;
+            let json = JSON.parse(html);
+            VOD = {
+                vod_url: input,
+                vod_name: json.c.title,
+                type_name: json.typ.join(","),
+                vod_actor: json.nam.join(","),
+                vod_year: json.c.year,
+                vod_content: json.c.description,
+                vod_remarks: json.rec,
+                vod_pic: urljoin2(input, json.c.pic)
             }
         } catch (e) {
-            log("获取影片信息发生错误:" + e.message)
+            log("解析片名海报等基础信息发生错误:" + e.message)
         }
-
-        function getRjpg(imgUrl, xs) {
-            xs = xs || 3;
-            let picSize = /jpg_/.test(imgUrl) ? imgUrl.split("jpg_")[1].split(".")[0] : false;
-            let rjpg = false;
-            if (picSize) {
-                let a = parseInt(picSize.split("x")[0]) * xs;
-                let b = parseInt(picSize.split("x")[1]) * xs;
-                rjpg = a + "x" + b + ".jpg"
-            }
-            let img = /jpg_/.test(imgUrl) && rjpg ? imgUrl.replace(imgUrl.split("jpg_")[1], rjpg) : imgUrl;
-            return img
-        }
-
-        if (json.data.total === 1 && json.data.list.length === 1) {
-            let data = json.data.list[0];
-            let url = "https://www.mgtv.com" + data.url;
-            d.push({
-                title: data.t4,
-                desc: data.t2,
-                pic_url: getRjpg(data.img),
-                url: url
+        if (/get_playsource/.test(input)) {
+            eval(html);
+            let indexList = QZOutputJson.PlaylistItem.indexList;
+            indexList.forEach(function (it) {
+                let dataUrl = "https://s.video.qq.com/get_playsource?id=" + sourceId + "&plat=2&type=4&data_type=3&range=" + it + "&video_type=10&plname=qq&otype=json";
+                eval(fetch(dataUrl, fetch_params));
+                let vdata = QZOutputJson.PlaylistItem.videoPlayList;
+                vdata.forEach(function (item) {
+                    d.push({
+                        title: item.title,
+                        pic_url: item.pic,
+                        desc: item.episode_number + "\t\t\t播放量：" + item.thirdLine,
+                        url: item.playUrl
+                    })
+                });
+                video_lists = video_lists.concat(vdata)
             })
-        } else if (json.data.list.length > 1) {
-            for (let i = 1; i <= json.data.total_page; i++) {
-                if (i > 1) {
-                    json = JSON.parse(fetch(input.replace("page=1", "page=" + i), {}))
+        } else {
+            let json = JSON.parse(html);
+            video_lists = json.c.video_ids;
+            let url = "https://v.qq.com/x/cover/" + sourceId + ".html";
+            if (video_lists.length === 1) {
+                let vid = video_lists[0];
+                url = "https://v.qq.com/x/cover/" + cid + "/" + vid + ".html";
+                d.push({
+                    title: "在线播放",
+                    url: url
+                })
+            } else if (video_lists.length > 1) {
+                for (let i = 0; i < video_lists.length; i += 30) {
+                    video_list.push(video_lists.slice(i, i + 30))
                 }
-                json.data.list.forEach(function (data) {
-                    let url = "https://www.mgtv.com" + data.url;
-                    if (data.isIntact == "1") {
+                video_list.forEach(function (it, idex) {
+                    let o_url = "https://union.video.qq.com/fcgi-bin/data?otype=json&tid=1804&appid=20001238&appkey=6c03bbe9658448a4&union_platform=1&idlist=" + it.join(",");
+                    let o_html = fetch(o_url, fetch_params);
+                    eval(o_html);
+                    QZOutputJson.results.forEach(function (it1) {
+                        it1 = it1.fields;
+                        let url = "https://v.qq.com/x/cover/" + cid + "/" + it1.vid + ".html";
                         d.push({
-                            title: data.t4,
-                            desc: data.t2,
-                            pic_url: getRjpg(data.img),
-                            url: url
+                            title: it1.title,
+                            pic_url: it1.pic160x90.replace("/160", ""),
+                            desc: it1.video_checkup_time,
+                            url: url,
+                            type: it1.category_map && it1.category_map.length > 1 ? it1.category_map[1] : ""
                         })
-                    }
+                    })
                 })
             }
-        } else {
-            print(input + "暂无片源")
         }
-        VOD.vod_play_from = "4K原画";
-        VOD.vod_play_url = d.map(function (it) {
+       let yg = d.filter(function (it) {
+            return it.type && it.type !== "正片"
+        });
+        let zp = d.filter(function (it) {
+            return !(it.type && it.type !== "正片")
+        });
+        VOD.vod_play_from = yg.length < 1 ? "4K-原画" : "qq$$$ 预告及花絮";
+        VOD.vod_play_url = yg.length < 1 ? d.map(function (it) {
             return it.title + "$" + it.url
-        }).join("#");
-        setResult(d);
+        }).join("#") : [zp, yg].map(function (it) {
+            return it.map(function (its) {
+                return its.title + "$" + its.url
+            }).join("#")
+        }).join("$$$");
     }),
-
     搜索: $js.toString(() => {
-        fetch_params.headers.Referer = "https://www.mgtv.com";
-        fetch_params.headers["User-Agent"] = MOBILE_UA;
         let d = [];
+        pdfa = jsp.pdfa;
+        pdfh = jsp.pdfh;
+        pd = jsp.pd;
         let html = request(input);
-        let json = JSON.parse(html);
-        json.data.contents.forEach(function(data) {
-            if (data.type && data.type == 'media') {
-                let item = data.data[0];
-                let desc = item.desc.join(',');
-                let fyclass = '';
-                if (item.source === "imgo") {
-                    let img = item.img ? item.img : '';
-                    try {
-                        fyclass = item.rpt.match(/idx=(.*?)&/)[1] + '$';
-                    } catch (e) {
-                        log(e.message);
-                        fyclass = '';
-                    }
-                    log(fyclass);
-                    d.push({
-                        title: item.title.replace(/<B>|<\/B>/g, ''),
-                        img: img,
-                        content: '',
-                        desc: desc,
-                        url: fyclass + item.url.match(/.*\/(.*?)\.html/)[1]
-                    })
-                }
+        let baseList = pdfa(html, "body&&.result_item_v");
+        log(baseList.length);
+        baseList.forEach(function (it) {
+            let longText = pdfh(it, ".result_title&&a&&Text");
+            let shortText = pdfh(it, ".type&&Text");
+            let fromTag = pdfh(it, ".result_source&&Text");
+            let score = pdfh(it, ".figure_info&&Text");
+            let content = pdfh(it, ".desc_text&&Text");
+            // let url = pdfh(it, ".result_title&&a&&href");
+            let url = pdfh(it, "div&&r-data");
+            // log(longText);
+            // log(shortText);
+            // log('url:'+url);
+            let img = pd(it, ".figure_pic&&src");
+            url = "https://node.video.qq.com/x/api/float_vinfo2?cid=" + url.match(/.*\/(.*?)\.html/)[1];
+            log(shortText + "|" + url);
+            if (fromTag.match(/腾讯/)) {
+                d.push({
+                    title: longText.split(shortText)[0],
+                    img: img,
+                    url: url,
+                    content: content,
+                    desc: shortText + " " + score
+                })
             }
         });
         setResult(d);
     }),
+    搜索: $js.toString(() => {
+        let d = [];
+        let html = request(input);
+        let json = JSON.parse(html);
+        if (json.data.smartboxItemList.length > 0) {
+            let cid = json.data.smartboxItemList[0].basicDoc.id;
+            let url = 'https://node.video.qq.com/x/api/float_vinfo2?cid=' + cid;
+            let html1 = request(url);
+            let data = JSON.parse(html1);
+
+            d.push({
+                title: data.c.title,
+                img: data.c.pic,
+                url: url,
+                content: data.c.description,
+                desc: data.rec
+            });
+        }
+        setResult(d);
+    })
 }
