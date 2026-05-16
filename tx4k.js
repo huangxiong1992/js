@@ -24,7 +24,7 @@ var rule = {
     timeout: 5000,
     // class_parse:'.site_channel a;a&&Text;a&&href;channel/(.*)',
     cate_exclude: '会员|游戏|全部',
-    // class_name: '精选&电视剧&电影&综艺&动漫&少儿&纪录片',
+    // class_name: '4K精选&4K电视剧&4K电影&4K综艺&4K动漫&4K少儿&4K纪录片',
     // class_url: 'choice&tv&movie&variety&cartoon&child&doco',
     class_name: '电视剧&电影&综艺&动漫&少儿&纪录片',
     class_url: 'tv&movie&variety&cartoon&child&doco',
@@ -166,7 +166,7 @@ lazy: $js.toString(() => {
             return !(it.type && it.type !== "正片")
         });
         VOD.vod_content = '关注公众号【玉玉应用笔记】\r\n';
-        VOD.vod_play_from = yg.length < 1 ? "玉玉应用笔记" : "玉玉应用笔记$$$预告及花絮";
+        VOD.vod_play_from = "4K原画";
         VOD.vod_play_url = yg.length < 1 ? d.map(function (it) {
             return it.title + "$" + it.url
         }).join("#") : [zp, yg].map(function (it) {
