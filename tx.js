@@ -1,6 +1,6 @@
 var rule = {
 	title: '腾云驾雾[官]',
-	parseUrl: 'https://api.m3u8.tv/jx.php?url=',
+	parseUrl: 'https://jx.xmflv.com/?url=',
 	host: 'https://v.qq.com',
 	homeUrl: '',
 	searchUrl: '/x/search/?q=**&stag=fypage',
