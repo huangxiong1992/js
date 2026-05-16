@@ -60,7 +60,7 @@ var rule = {
 		} catch(e){
 			log("解析分集错误:"+e.message)
 		}
-		VOD.vod_play_from = "腾讯原生";
+		VOD.vod_play_from = "4K原画";
 		VOD.vod_play_url = d.map(it=>it.title+"$"+it.url).join("#");
 		setResult(d);
 	}),
