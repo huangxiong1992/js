@@ -2111,8 +2111,8 @@ var rule = {
         'Referer': 'https://www.youku.com',
     },
     timeout: 5000,
-    class_name: '电视剧&电影&综艺&动漫&少儿&纪录片&文化&亲子&教育&搞笑&生活&体育&音乐&游戏',
-    class_url: '电视剧&电影&综艺&动漫&少儿&纪录片&文化&亲子&教育&搞笑&生活&体育&音乐&游戏',
+    class_name: '4K电视剧&4K电影&4K综艺&4K动漫&4K少儿&4K纪录片&文化&亲子&教育&搞笑&生活&体育&音乐&游戏',
+    class_url: '4K电视剧&4K电影&4K综艺&4K动漫&4K少儿&4K纪录片&文化&亲子&教育&搞笑&生活&体育&音乐&游戏',
     limit: 20,
     play_parse: true,
     lazy: $js.toString(() => {
