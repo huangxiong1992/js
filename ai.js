@@ -18,8 +18,8 @@ var rule = {
     headers:{
         'User-Agent':'MOBILE_UA'
     },
-    timeout:5000,
-    class_name:'电影&电视剧&纪录片&动漫&综艺&音乐&网络电影',
+    timeout:500,
+    class_name:'4K电影&4K电视剧&4K纪录片&4K动漫&4K综艺&4K音乐&4K网络电影',
     class_url:'1&2&3&4&6&5&16',
     limit:20,
     // play_parse:true,
