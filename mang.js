@@ -801,7 +801,7 @@ var rule = {
         } else {
             print(input + "暂无片源")
         }
-        VOD.vod_play_from = "mgtv";
+        VOD.vod_play_from = "4K原画";
         VOD.vod_play_url = d.map(function(it) {
             return it.title + "$" + it.url
         }).join("#");
